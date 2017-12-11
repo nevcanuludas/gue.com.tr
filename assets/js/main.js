@@ -133,3 +133,41 @@
 	});
 
 })(jQuery);
+
+/* Count Down */
+CountDownTimer('04/02/2018 09:30 AM', 'countdown');
+// CountDownTimer('10/07/2017 09:30 AM', 'countdown');
+
+function CountDownTimer(dt, id)
+{
+	var end = new Date(dt);
+
+	var _second = 1000;
+	var _minute = _second * 60;
+	var _hour = _minute * 60;
+	var _day = _hour * 24;
+	var timer;
+
+	function showRemaining() {
+		var now = new Date();
+		var distance = end - now;
+		if (distance < 0) {
+
+			clearInterval(timer);
+			document.getElementById(id).innerHTML = 'EXPIRED!';
+
+			return;
+		}
+		var days = Math.floor(distance / _day);
+		var hours = Math.floor((distance % _day) / _hour);
+		var minutes = Math.floor((distance % _hour) / _minute);
+		var seconds = Math.floor((distance % _minute) / _second);
+
+		document.getElementById(id).innerHTML = days + '<span class="countdown-unit">gün </span>';
+		document.getElementById(id).innerHTML += hours + '<span class="countdown-unit">saat </span>';
+		document.getElementById(id).innerHTML += minutes + '<span class="countdown-unit">dk </span>';
+		document.getElementById(id).innerHTML += seconds + '<span class="countdown-unit">sn</span>';
+	}
+
+	timer = setInterval(showRemaining, 1000);
+}
