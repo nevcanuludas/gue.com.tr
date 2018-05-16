@@ -135,7 +135,7 @@
 })(jQuery);
 
 /* Count Down */
-CountDownTimer('04/02/2018 09:30 AM', 'countdown');
+CountDownTimer('08/10/2018 9:00 PM', 'countdown');
 // CountDownTimer('10/07/2017 09:30 AM', 'countdown');
 
 function CountDownTimer(dt, id)
