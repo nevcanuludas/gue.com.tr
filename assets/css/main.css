@@ -3149,3 +3149,20 @@
 #sss h2 {
 	color: #2782c8;
 }
+
+.btn-whatsapp {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	border: 5px solid #ffffff;
+	background-color: #1ebea5 !important;
+	padding: 10px;
+	border-radius: 20px;
+	color: #ffffff;
+	z-index: 9;
+}
+
+.btn-whatsapp:hover {
+	text-decoration: none;
+	color: darkgreen !important;
+}
